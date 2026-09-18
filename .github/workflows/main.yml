@@ -1,17 +1,18 @@
-name: ci-cd pipeline for practice github action
+name: CI-CD Pipeline for Practice GitHub Action
 
 on:
   push:
-    branches: main
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
-      name: MY first step
-      run:
-        echo "This is devops practice"
-        uname -a
+      - name: My First Step
+        run: |
+          echo "This is devops practice"
+          uname -a
