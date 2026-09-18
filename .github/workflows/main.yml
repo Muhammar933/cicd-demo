@@ -1,0 +1,17 @@
+name: ci-cd pipeline for practice github action
+
+on:
+  push:
+    branches: main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/chechout@v4
+
+      name: MY first step
+      run:
+        echo "This is devops practice"
+        uname -a
