@@ -1,25 +1,19 @@
-name: CI-CD Pipeline for Practice GitHub Action
+name: practice pipeline on gihub actions
 
 on:
   push:
-    branches: [main]
-
+    branches: main
 jobs:
-  build:
+  test-job:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: My First Step
-        run: |
-          echo "This is devops practice"
-          uname -a
-      - name: Check docker installation
-        run: |
-          docker
-          docker images
-      - name: Run docker container
-        run: |
-          docker run hello-world
+      - name: print a message
+        run: echo "Pipeline chal rahi hai"
+
+      - name: Show current directory
+        run: ls -la
+    
